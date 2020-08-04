@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="browser" value="chrome"/>
+  <test name="Test">
+    <classes>
+      <class name="com.qa.verizon.test.PhoneTest"/>
+      <class name="com.qa.verizon.test.SmartPhonePageTest"/>
+      <class name="com.qa.verizon.test.HomePageTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.qa.verizon.test.SmartPhonePageTest">
+        <methods>
+          <include name="Setup"/>
+          <include name="teardown"/>
+          <include name="PagetitleVerify"/>
+        </methods>
+      </class> <!-- com.qa.verizon.test.SmartPhonePageTest -->
+      <class name="com.qa.verizon.test.PhoneTest">
+        <methods>
+          <include name="getSecondTitle"/>
+          <include name="VerifyPhone"/>
+          <include name="VerifyTitle"/>
+          <include name="teardown"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.qa.verizon.test.PhoneTest -->
+      <class name="com.qa.verizon.test.HomePageTest">
+        <methods>
+          <include name="Clickphone"/>
+          <include name="teardown"/>
+          <include name="Setup"/>
+          <include name="verifyPagetitle"/>
+        </methods>
+      </class> <!-- com.qa.verizon.test.HomePageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

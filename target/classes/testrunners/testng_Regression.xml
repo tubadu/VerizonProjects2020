@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Verizon Regression" >
+<listeners>
+	<!-- <listener class-name="com.qa.verizon.listeners.ScreenshotListener" /> -->
+<!-- 	<listener class-name="com.qa.verizon.listener.TestAllureListener" /> -->
+  <!--   <listener class-name="com.qa.verizon.listener.ExtentReportListener" /> -->
+    <listener class-name="com.qa.verizon.listener.pdfListener" />
+	</listeners>
+
+<parameter name="browser" value="chrome"/>
+  <test name="Test">
+    <classes>
+      <class name="com.qa.verizon.test.PhoneTest"/>
+      <class name="com.qa.verizon.test.SmartPhonePageTest"/>
+      <class name="com.qa.verizon.test.HomePageTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
